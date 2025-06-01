@@ -80,7 +80,15 @@ USE_L10N = True
 USE_TZ = True
 
 # ✅ Make sure static files are collected properly
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+
+# This is where static files will be collected to (for Render to serve)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# This is where Django will look for your own static files (for development)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
